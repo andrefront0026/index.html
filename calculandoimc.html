@@ -1,0 +1,30 @@
+<script>
+
+function pulaLinha() {
+    document.write("<br>");
+    document.write("<br>");
+
+} 
+
+function mostra(frase) {
+    document.write(frase);
+    pulaLinha();
+
+}
+
+function calculaImc (peso, altura) {
+    var imc = peso / (altura * altura);
+    return imc;
+
+   
+}
+
+var imcAmigo = calculaImc(80, 1.74);
+var imcAndre = calculaImc(73, 1.62);
+var imcTotal = imcAmigo + imcAndre;
+
+// pode simplificar melhor ainda a função: var imcTotal = calculaImc(80, 1.74) + calculaImc(73, 1.62);
+
+document.write("A soma total dos imc's é " + imcTotal);
+
+</script>
