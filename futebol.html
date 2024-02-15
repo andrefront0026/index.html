@@ -8,21 +8,17 @@ function pulaLinha () {
     
     function mostra(frase) {
         document.write(frase);
-        mostra();
+        pulaLinha();
 }
 
 
 var vitorias = prompt("Entre com o número de vitórias");
+alert(vitorias * 3);
+
 var empates = prompt("Entre com o número de empates");
+var pontos = vitorias * 3 + empates;
 
-
-
-
-
-
-
-
-
+mostra("Os pontos do seu time são " + pontos);
 
 
 </script>
