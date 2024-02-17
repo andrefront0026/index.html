@@ -1,41 +1,39 @@
 <meta charset="UTF-8">
 <script>
 
-    function pulaLinha() {
-        document.write("<br>");
-        document.write("<br>");
-    }
-
-    function mostra(frase) {
-        document.write(frase);
-        pulaLinha();
-    }
-
-    function calculaImc(altura, peso) {
-       return imc = peso / (altura * altura);
-    }
-
-   var nome = prompt("Informe seu nome"); 
-   var alturaInformada = prompt(nome + ", Informe sua altura");
-   var pesoInformado = prompt(nome + ", Informe seu peso");
-
-   var imc = calculaImc(alturaInformada, pesoInformado);
-        mostra(nome + " O seu imc calculado é " + imc);
-        
-if(imc < 18.5) {
-    mostra("O seu imc está abaixo do esperado");
+function pulaLinha() {
+    document.write("<br><br>");
 }
 
-if(imc > 35) {
-    mostra("O seu imc está acima do esperado");
+function mostra(frase) {
+    document.write(frase);
+    pulaLinha();
+}
+
+function calculaImc(altura, peso) {
+    return imc = peso / (altura * altura);
+    
+}
+
+var nome = prompt("Informe seu nome")
+var alturaInformada = prompt(nome + ", Informe sua altura");
+var pesoInformado = prompt(nome + ", informe o seu peso");
+var imc = calculaImc(alturaInformada, pesoInformado);
+    mostra(nome + ", O imc calculado é " + imc);
+
+if(imc < 18.5) {
+mostra("O seu imc está abaixo da média.");
+}
+
+if(imc > 30) {
+mostra("O seu imc está ácima da média.");
 }
 
 if(imc >= 18.5) {
-    if(imc <= 35) {
-        mostra("O seu imc está dentro da média");
+    if(imc <= 30) {
+        mostra("O seu imc está dentro do esperado.");
     }
 }
 
 
 </script>
-
