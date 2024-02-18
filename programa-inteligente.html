@@ -11,15 +11,14 @@ function mostra(frase) {
     pulaLinha();
 }
 
-var numeroPensado = Math.round(Math.random() * 10);
-    console.log(numeroPensado);
-    
-var chute = parseInt(prompt("Digite o número pensado"));
+var nome = prompt(" Insira o seu nome aqui ");
+var numeroPensado = Math.round(Math.random() * 10);   
+var chute = parseInt(prompt(nome + ", Digite o número pensado"));
 
 if(chute == numeroPensado) {
-    mostra("parabéns. você acertou.");
+    mostra(nome + ", parabéns. você acertou. O número pensado foi ");
 } else {
-    mostra("você errou." + numeroPensado);
+    mostra(nome + ", você errou. O número pensado foi " + numeroPensado);
 }
 
 
