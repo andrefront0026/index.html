@@ -1,5 +1,26 @@
 <meta charset="UTF-8">
 <script>
+ 
+    function pulaLinha() {
+        document.write("<br>");
+        document.write("<br>");
+    }
 
-    
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+    var nome = prompt("Digite seu nome para começar a  BRINCADEIRA.")
+
+var numeroPensado = 10;
+var chute = parseInt(prompt(nome + ", Digite aqui seu chute."));
+
+    if(chute == numeroPensado) {
+        mostra(nome + ",  PARABÉNS!!! você acertou.");
+    }
+
+    if(chute != numeroPensado) {
+        mostra(nome + ",  você errou!!! tente outra vez");
+    }
+
 </script>
