@@ -1,4 +1,5 @@
 <meta charset="UTF-8">
+
 <input/>
 <button>clique aqui</button>
 
@@ -6,25 +7,24 @@
 
 var input = document.querySelector("input");
 
-    var segredo =Math.round(Math.random() * 10);
+var segredo = Math.round(Math.random() * 10); 
+        input.focus();
 
+function guarda() {
 
-    function guarda() {
+        if(input.value == segredo) {
 
-            if(input.value == segredo) {
-
-            alert("parabéns você acertou !!!!!");
+        alert("parabéns você acertou !!!!!");
 
         } else {
 
-            alert("infelizmente você errou !!!!!!")
+        alert("você errou !!!!!!!!!!!")
         }
         input.value = "";
         input.focus();
     }
-   
-var button = document.querySelector("button");
-    button.onclick = guarda;
 
+    var button = document.querySelector("button");
+    button.onclick = guarda;
 
 </script>
