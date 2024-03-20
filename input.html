@@ -7,20 +7,28 @@
 
 var input = document.querySelector("input");
 
-var segredo = [5,7,10,2];
-
+        var segredos = [5,7,10,2,3];
         input.focus();
 
-function guarda() {
+        function guarda() {
 
-        if(input.value == segredo) {
+        var achou = false;
+        for(var posicao = 0; posicao < segredos.length; posicao++) {
 
-        alert("parabéns você acertou !!!!!");
+        if(input.value == segredos[posicao]) {
 
-        } else {
+          alert("parabéns você acertou !!!!!");
+          achou = true;
+            break;
 
-        alert("você errou !!!!!!!!!!!")
+          } 
         }
+        if(achou == false) {
+                        
+        alert("você errou !!!!");
+      }
+       
+
         input.value = "";
         input.focus();
     }
