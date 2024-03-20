@@ -1,41 +1,36 @@
- <meta charset="UTF-8">
+<meta charset="UTF-8">
+<script>
 
-<input/>
-<button> informe seu numero aqui</button>
+function pulaLinha () {
+    document.write("<br>");
+    document.write("<br>");
+}
 
- 
- <script>
+function mostra(frase) {
+    document.write(frase);
+    pulaLinha();
+}
 
-    var segredos = [5,7,10,2,3];
+var numeroPensado = Math.round(Math.random() * 10);
 
-    var input = document.querySelector("input");
-      input.focus();
+var tentativas = 1;
 
-    function verifica() {
-      var achou = false;
+while(tentativas <= 3) {
+    var numero = parseInt(prompt("entre com o número"));
 
-    for(var posicao = 0; posicao < segredos.length; posicao++) {
-      if(input.value == segredos [posicao]) {
+    if(numero == numeroPensado) {
+        mostra("parabéns você acertou !!!!!!");
+        break;
 
-          alert("você acertou !");
-          achou = true;
-          break;
+    } else {
 
-          } 
-      }
-
-      if(achou == false) {
-        alert("você errou !!!!!");
-
-      }
-       input.value = "";
-       input.focus();
+        mostra("infelizmente você errou !!!!!!!!!!!!!!  " + numeroPensado);
     }
-    
+    tentativas++;
+}
 
-   
+mostra("FIM");
 
-  var button = document.querySelector("button");
-  button.onclick = verifica;
 
- </script>
+
+</script>
